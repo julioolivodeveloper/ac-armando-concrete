@@ -115,10 +115,10 @@ button:focus-visible,a:focus-visible,input:focus-visible { outline:3px solid #67
 .proof-grid > div { min-height:57px; display:flex; align-items:center; gap:17px; padding-inline:25px; border-right:1px solid #e0e4dc; }
 .proof-grid > div:first-child { padding-left:0; }
 .proof-grid > div:last-child { border:0; padding-right:0; }
-.proof-number { align-self:flex-start; color:#779e38; font:600 20px/1 var(--display); }
+.proof-number { flex:0 0 auto; align-self:flex-start; color:#6f9f27; font:700 clamp(2rem,2.8vw,2.5rem)/.9 var(--display); letter-spacing:-.035em; }
 .proof-grid p strong,.proof-grid p span { display:block; }
-.proof-grid p strong { font-size:12px; }
-.proof-grid p span { margin-top:4px; color:#777e75; font-size:10px; }
+.proof-grid p strong { font-size:13px; }
+.proof-grid p span { margin-top:5px; color:#70786e; font-size:11px; }
 .services-section { padding-block:110px 120px; color:#fff; background:var(--black); }
 .section-head { display:flex; justify-content:space-between; gap:60px; align-items:end; margin-bottom:49px; }
 .section-head-light h2 { color:white; }
@@ -334,7 +334,9 @@ dialog::backdrop { background:#0c110db8; backdrop-filter:blur(5px); }
   .hero-stamp { width:80px; height:80px; font-size:37px; }
   .hero-footnote { align-items:flex-start; }
   .proof-grid > div { padding-inline:13px; gap:11px; }
-  .proof-grid p span { font-size:9px; }
+  .proof-number { font-size:34px; }
+  .proof-grid p strong { font-size:12px; }
+  .proof-grid p span { font-size:10px; }
   .services-section,.work-section,.approach-section { padding-block:84px; }
   .section-head { gap:30px; }
   .section-head h2 { font-size:clamp(3.5rem,6.6vw,4.8rem); }
@@ -414,7 +416,9 @@ dialog::backdrop { background:#0c110db8; backdrop-filter:blur(5px); }
   .proof-grid { grid-template-columns:1fr; padding-block:10px; }
   .proof-grid > div,.proof-grid > div:first-child,.proof-grid > div:last-child { min-height:69px; padding:10px 0; border:0; border-bottom:1px solid #e0e4dc; }
   .proof-grid > div:last-child { border-bottom:0; }
-  .proof-grid p span { font-size:9px; }
+  .proof-number { font-size:32px; }
+  .proof-grid p strong { font-size:13px; }
+  .proof-grid p span { font-size:10px; }
   .services-section,.work-section,.approach-section { padding-block:66px 70px; }
   .section-head { display:block; margin-bottom:28px; }
   .section-head h2 { margin-top:15px; }
