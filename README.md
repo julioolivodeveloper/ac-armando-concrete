@@ -15,6 +15,11 @@ A responsive, single-page website concept for AC Armando Concrete, featuring a b
 
 - `dist/` contains the complete static website and optimized image assets.
 - `vercel.json` configures the static output directory for Vercel.
+- `.github/workflows/deploy-pages.yml` publishes `dist/` to GitHub Pages on pushes to `main`.
+
+## Public website
+
+<https://julioolivodeveloper.github.io/ac-armando-concrete/>
 
 ## Preview locally
 

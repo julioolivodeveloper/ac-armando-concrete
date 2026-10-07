@@ -533,10 +533,10 @@ dialog::backdrop { background:#0c110db8; backdrop-filter:blur(5px); }
 .video-card-index { display:flex; align-items:center; gap:9px; min-height:22px; color:var(--green); font:700 12px/1 var(--display); letter-spacing:.06em; }
 .video-card-index i { color:#aab2a6; font:700 8px/1 var(--body); font-style:normal; letter-spacing:.1em; }
 .video-card-art { position:relative; overflow:hidden; margin-top:8px; aspect-ratio:357/476; background-color:#202720; background-position:center; background-size:cover; }
-.video-card-one .video-card-art { background-image:url("/assets/img_4135.webp"); }
-.video-card-two .video-card-art { background-image:url("/assets/img_4150.webp"); }
-.video-card-three .video-card-art { background-image:url("/assets/img_4152.webp"); }
-.video-card-four .video-card-art { background-image:url("/assets/img_4151.webp"); }
+.video-card-one .video-card-art { background-image:url("./assets/img_4135.webp"); }
+.video-card-two .video-card-art { background-image:url("./assets/img_4150.webp"); }
+.video-card-three .video-card-art { background-image:url("./assets/img_4152.webp"); }
+.video-card-four .video-card-art { background-image:url("./assets/img_4151.webp"); }
 .video-card-art iframe { display:block; width:100%; height:100%; border:0; background:transparent; }
 .video-card-bottom { min-height:49px; display:flex; justify-content:space-between; align-items:end; gap:8px; padding-top:11px; }
 .video-card-bottom strong { font:600 20px/1 var(--display); }
