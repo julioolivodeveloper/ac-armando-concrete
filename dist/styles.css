@@ -549,11 +549,13 @@ dialog::backdrop { background:#0c110db8; backdrop-filter:blur(5px); }
 /* Rotating hero photographs, typewriter headline and service imagery */
 .hero h1 { font-size:clamp(4rem,6.6vw,6.9rem); }
 .hero h1 .hero-title-visual { color:var(--ink); }
-.hero-changing-line { position:relative; display:inline-block; color:#70a91b; white-space:nowrap; }
-.hero-changing-line::after { content:"from the ground up."; visibility:hidden; }
-.hero-changing-line > span { position:absolute; inset:0 auto auto 0; color:inherit; white-space:nowrap; }
-.hero-changing-line > i { position:absolute; top:.1em; right:-.1em; width:3px; height:.68em; background:var(--green-deep); animation:hero-caret .8s steps(2,start) infinite; }
-@keyframes hero-caret { to { visibility:hidden; } }
+.hero-changing-line { position:relative; display:inline-grid; grid-template-columns:max-content; color:#70a91b; white-space:nowrap; }
+.hero-line-width,.hero-changing-line [data-hero-type] { grid-area:1 / 1; white-space:nowrap; }
+.hero-line-width { visibility:hidden; }
+.hero-line-width::after { content:"from the ground up.\00a0"; }
+.hero-changing-line [data-hero-type] { position:relative; justify-self:start; color:inherit; }
+.hero-changing-line [data-hero-type]::after { content:""; display:inline-block; width:.035em; height:.68em; margin-left:.055em; vertical-align:.02em; background:var(--green-deep); animation:hero-caret .8s step-end infinite; }
+@keyframes hero-caret { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
 .hero-image { isolation:isolate; }
 .hero-image img.hero-slide { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 52%; opacity:0; transform:scale(1.035); transition:opacity 1.15s ease,transform 6.5s linear; }
 .hero-image img.hero-slide.is-active { opacity:1; transform:scale(1.105); }
@@ -568,11 +570,11 @@ dialog::backdrop { background:#0c110db8; backdrop-filter:blur(5px); }
 @media(max-width:900px) { .hero h1 { font-size:clamp(3.8rem,7.7vw,5.7rem); } }
 @media(max-width:600px) {
   .hero h1 { font-size:clamp(3.65rem,14.3vw,5.25rem); }
-  .hero-changing-line::after { content:"built to last."; }
+  .hero-line-width::after { content:"made with care.\00a0"; }
   .service-card .service-photo { opacity:.76; }
 }
 @media(max-width:350px) { .hero h1 { font-size:3.35rem; } }
-@media(prefers-reduced-motion:reduce) { .hero-image img.hero-slide,.service-card .service-photo { transition:none; transform:none; } .hero-changing-line > i { animation:none; } }
+@media(prefers-reduced-motion:reduce) { .hero-image img.hero-slide,.service-card .service-photo { transition:none; transform:none; } .hero-changing-line [data-hero-type]::after { animation:none; opacity:.85; } }
 
 /* Project gallery carousel */
 .work-carousel { position:relative; }
