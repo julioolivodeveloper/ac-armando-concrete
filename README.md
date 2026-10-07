@@ -14,6 +14,7 @@ A responsive, single-page website concept for AC Armando Concrete, featuring a b
 ## Project structure
 
 - `dist/` contains the complete static website and optimized image assets.
+- `dist/assets/ac-armando-share.jpg` is the 1200 × 630 share preview used by Open Graph and X Cards.
 - `vercel.json` configures the static output directory for Vercel.
 - `.github/workflows/deploy-pages.yml` publishes `dist/` to GitHub Pages on pushes to `main`.
 
